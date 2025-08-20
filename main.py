@@ -47,7 +47,7 @@ def text_to_speech(text):
     
     
 def gemini_model(user_input):
-    genai.configure(api_key = "AIzaSyDuGwMsQnXPgPkH1jIuaaDsitlgQ-3ES9k")  #either you can do  this or do make file .env to set GOOGLE_API_KEY
+    genai.configure(api_key = "Your-own-API-Key")  #either you can do  this or do make file .env to set GOOGLE_API_KEY
     model = genai.GenerativeModel('gemini-2.5-flash')
     response = model.generate_content(user_input)
     results = response.text
@@ -76,4 +76,5 @@ def main():
             st.audio(audio_bytes, format= "audio/mp3")
             st.download_button(label= "Download Speech", data=audio_bytes, file_name= "speech.mp3", mime="audio/mp3")
     
+
 main()
