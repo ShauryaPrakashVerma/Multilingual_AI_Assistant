@@ -1,2 +1,2 @@
 # Multilingual_AI_Assistant
-- Development in progre
+- Development in progress.
